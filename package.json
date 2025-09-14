@@ -1,0 +1,20 @@
+{
+  "name": "auth_system",
+  "version": "1.0.0",
+  "description": "a simple auth system",
+  "homepage": "https://github.com/sandilya27/Auth_System#readme",
+  "bugs": {
+    "url": "https://github.com/sandilya27/Auth_System/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandilya27/Auth_System.git"
+  },
+  "license": "ISC",
+  "author": "sachindra cs",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

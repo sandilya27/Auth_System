@@ -1,0 +1,16 @@
+# <type>: <short summary>
+# 
+# Types:
+#   feat     -> new feature
+#   fix      -> bug fix
+#   refactor -> code improvement (no new feature/bug fix)
+#   docs     -> documentation only
+#   style    -> formatting, UI, CSS (no code logic change)
+#   chore    -> configs, dependencies, build scripts
+#
+# Example:
+#   feat: add login API
+#   fix: resolve crash on class creation
+#
+# --------------------
+# Write your commit message below this line:
