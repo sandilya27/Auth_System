@@ -52,4 +52,34 @@ const registerUser = async (req, res) => {
   }
 };
 
-export { registerUser };
+const verifyUser = async (req, res) => {
+    // - get token from url
+    // - validate
+    // - find user based on token
+    // - handle if not
+    // - set isVerified field to true
+    // - remove verifcation token
+    // - save
+    // - return response
+    const { token } = req.params;
+    if(!token){
+        return res.status(400).json({message: "Token is required"});
+    }
+
+    try {
+        const user = await User.findOne({verificationToken:token});
+        if(!user){
+            return res.status(400).json({message: "Invalid token or user does not exsist"});
+        }
+        user.isVerified = true;
+        user.verificationToken = undefined;
+        await user.save();
+        res.status(200).json({message: "Email verified successfully", success:true});
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message: "Internal server error"});
+    }
+
+}
+
+export { registerUser,verifyUser };
